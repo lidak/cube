@@ -3,7 +3,7 @@ import Cube from './Cube';
 let cubeElement = document.querySelector('.cube');
 let cube = new Cube(cubeElement);
 
-//cube.startShow();
+cube.startShow();
 
 document.onkeydown = (e) => {
   switch (e.keyCode) {

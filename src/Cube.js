@@ -6,14 +6,7 @@ export default class Cube {
     this._y = 0;
     this._x = 0;
 
-    this.sideDictionary = {
-      0: 'front',
-      1: 'back',
-      2: 'right',
-      3: 'left',
-      4: 'top',
-      5: 'bottom'
-    }
+    this.sideDictionary = ['front', 'back', 'right', 'left', 'top', 'bottom'];
 
     Array.prototype.forEach.call(cubeElement.children, (side, index) => {
       side.onclick = () => {
@@ -21,13 +14,13 @@ export default class Cube {
       }
     });
 
-    // this.cubeElement.onmouseover = () => {
-    //   this.stopShow();
-    // }
-    //
-    // this.cubeElement.onmouseout = () => {
-    //   this.startShow();
-    // }
+    this.cubeElement.onmouseover = () => {
+      this.stopShow();
+    }
+
+    this.cubeElement.onmouseout = () => {
+      this.startShow();
+    }
   }
 
   set xPos (value) {
